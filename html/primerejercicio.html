@@ -1,74 +1,117 @@
-<!DOCTYPE html>
+<!--Author: Gustavo Franco Lizarraga-->
 
-<html lang="en">
+<!DOCTYPE html><!--this is a convecion for web browsers-->
+
+<html lang="en"> <!--this is for specify the website languaje-->
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!--this noticed the browser what charset use-->
     <title>CatPhotoApp</title>
 </head>
 
 <body>
-    <main>
-        <h1>CatPhotoApp</h1>
-        <section>
+    <main> <!--this tag is for put the content of the webpage-->
+        <h1>CatPhotoApp</h1> <!--"h" tags work for titles and headers, a document should only have one <h1>, the rest of the "h" tags are subtitles-->
+
+
+        <section> <!--this is a section, divides the content of the web page-->
             <h2>Cat Photos</h2>
             <!-- TODO: Add link to cat photos -->
-            <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
+            <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p> 
+            <!--this is a paragraph tag"<p>", into this paragraph there's a <a> tag that defines a hyperlink which is used to link from one page to another,
+            href is the hyper reference to the other link, and target specifies where to open the linked document. -->
             <a href="https://freecatphotoapp.com"><img
                     src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
                     alt="A cute orange cat lying on its back."></a>
+            <!--an <img> tag is uded to add images to the web side, with the property src we sprecify the image location,
+            alt attribute specifies an alternate text for an image, if the image cannot be displayed.-->
+
         </section>
+
+
+
         <section>
             <h2>Cat Lists</h2>
             <h3>Things cats love:</h3>
-            <ul>
+
+
+            <ul> <!--this tag "<ul>"defines an unordered list, this means that it isn't numered-->
                 <li>cat nip</li>
-                <li>laser pointers</li>
+                <li>laser pointers</li> <!--<li> HTML element is used to represent an item in a list.-->
                 <li>lasagna</li>
             </ul>
-            <figure>
+
+
+
+            <figure> <!--this is the structure to cite an image the <figure> tag graps the <img> and <figcaption> tags--> 
                 <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
                     alt="A slice of lasagna on a plate.">
-                <figcaption>Cats <em>love</em> lasagna.</figcaption>
+                <figcaption>Cats <em>love</em> lasagna.</figcaption> <!--this tag adds a text to the image-->
             </figure>
+
+
+
             <h3>Top 3 things cats hate:</h3>
-            <ol>
+            <ol> <!--this is an ordered list, it means that each element in this list in numbered-->
                 <li>flea treatment</li>
                 <li>thunder</li>
                 <li>other cats</li>
             </ol>
+
+
             <figure>
                 <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
                     alt="Five cats looking around a field.">
                 <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
             </figure>
+
         </section>
+
+
         <section>
+
             <h2>Cat Form</h2>
+
             <form action="https://freecatphotoapp.com/submit-cat-photo">
-                <fieldset>
-                    <legend>Is your cat an indoor or outdoor cat?</legend>
-                    <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+
+                <fieldset> <!--the fieldset tag agroups radio and checkbox inputs-->
+                    <legend>Is your cat an indoor or outdoor cat?</legend> <!--<legend> tag adds information text to a radio or checkbox input group-->
+                    <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label> 
+                    <!--<label> tag if for put the value of each radio or checkbox input -->
                     <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+                    <!--all radio inputs must have its "id" atribute like the input text, and the value property that is sended by the form after clicked the
+                    submit button must have the same content that input text as well, finally all associated input must have the same name property for select
+                    just one option only for radio inputs, if you want stablish one option by defauld, write the property "checked" on an input-->
                 </fieldset>
+
                 <fieldset>
                     <legend>What's your cat's personality?</legend>
                     <input id="loving" type="checkbox" name="personality" value="loving" checked> <label
-                        for="loving">Loving</label>
+                        for="loving">Loving</label> 
+                        <!--each checkbox input must have a label tag that must have the property "for", and each for must have the the "id" property from the
+                        checkbox input, also checkbox inputs must have the same name property for agroup them-->
                     <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
                     <input id="energetic" type="checkbox" name="personality" value="energetic"> <label
                         for="energetic">Energetic</label>
                 </fieldset>
-                <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+
+                <input id="caturl" type="text" name="catphotourl" placeholder="cat photo URL" required>
+                <!--this is an input text, it must have an id and a name, placeholder property shows what write on the text input, the property require means
+                that is an obligatory field-->
+
                 <button type="submit">Submit</button>
+
             </form>
         </section>
+
     </main>
-    <footer>
+
+    <footer> <!--this tag is for the final part of the document-->
         <p>
             No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
         </p>
     </footer>
+
 </body>
 
 </html>
